@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- Template Main CSS File -->
+  <link href="asset/css/main.css" rel="stylesheet">
+<title>Customized Cake Form</title>
+<style>
+    body {
+        font-family: CURSIVE;
+        background-color: #f9d4da; /* Babypink */
+        margin: 0;
+        padding: 0;
+       
+        
+    }
+
+    div{
+    padding: 10px;
+    }
+    .container_form {
+        width: 80%;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-left:10%;
+        background: #fff;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+    }
+    h2 {
+        text-align: center; font-family: CURSIVE;
+        font-size:50px;
+    }
+    form {
+        margin-top: 20px;
+    }
+    label {
+    	font-size:150%;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 19px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="date"] {
+        width: calc(100% - 40px); /* Adjusting for datepicker arrow */
+    }
+    input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    .header .logo h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  font-family: "Lucida Console", "Courier New", monospace;
+  padding-top: 25px;
+}
+.cake_grid img{
+width:45%;
+height:auto;
+
+}
+.cake_grid{
+    height: 50%;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.main_grid{
+    
+    display:grid;
+        grid-template-columns: 1fr 1fr;
+}
+
+</style>
+</head>
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="home.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="asset/img/logo.png" alt=""> -->
+        <h1>Sweet Sclupt<span>.</span></h1>
+      </a>
+           </nav>
+    </div>
+  </header>
+<body>
+    <div class="main_grid">
+ <div class="cake_grid">
+ <img src="checkout-cake.png">
+ </div>
+
+<div class="container_form">
+
+    <h2>Customized Cake Form</h2>
+    <hr>
+    <form action="checkout.php" method="POST">
+	
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type=text id="phone" name="phone" required>
+        </div>
+        <hr>
+        <div>
+            <label for="event">Type of Event:</label>
+            <select id="event" name="event" required>
+                <option value="">Select</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Anniversary">Anniversary</option>
+            </select>
+        </div>
+        <div>
+            <label for="eventDate">Event Date:</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+        </div>
+        <div>
+            <label for="deliveryDateTime">Delivery/Pickup Date and Time:</label>
+            <input type="datetime-local" id="deliveryDateTime" name="deliveryDateTime">
+        </div>
+        <div>
+            <label for="deliveryAddress">Delivery Address:</label>
+            <input type="text" id="deliveryAddress" name="deliveryAddress">
+        </div>
+        <hr>
+        <div>
+            <label for="cakeFlavor">Cake Base Flavor:</label>
+            <select id="cakeFlavor" name="cakeFlavor" required>
+                <option value="">Select</option>
+                <option value="Vanilla">Vanilla</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Red Velvet">Red Velvet</option>
+            </select>
+        </div>
+        <div>
+            <label for="cakeShape">Cake Shape:</label>
+            <select id="cakeShape" name="cakeShape" required>
+                <option value="Square">Square</option>
+		<option value="Circle">Circle</option>
+		<option value="Heart">Heart</option>
+		<option value="Triangle">Triangle</option>
+		<option value="Rectangle">Rectangle</option>
+		<option value="Star">Star</option>
+		<option value="Oval">Oval</option>
+		<option value="Diamond">Diamond</option>
+		<option value="Two_Tire">Two Tire</option>
+		<option value="Three_Tire">Three Tire</option>
+		<option value="Hanging">Hanging</option>
+            </select>
+        </div>
+        <div>
+            <label for="frosting">Frosting/Filling Flavor:</label>
+            <select id="frosting" name="frosting" required>
+                <option value="">Select</option>
+                <option value="Buttercream">Buttercream</option>
+		<option value="Cream_Cheese">Cream Cheese</option>
+		<option value="Chocolate_Ganache">Chocolate Ganache</option>
+		<option value="Vanilla">Vanilla</option>
+		<option value="Chocolate">Chocolate</option>
+		<option value="Red_Velvet">Red Velvet</option>
+		<option value="Lemon">Lemon</option>
+		<option value="Carrot">Carrot</option>
+		<option value="Coconut">Coconut</option>
+		<option value="Almond">Almond</option>
+		<option value="Hazelnut">Hazelnut</option>
+		<option value="Coffee">Coffee</option>
+		<option value="Strawberry">Strawberry</option>
+		<option value="Raspberry">Raspberry</option>
+		<option value="Blueberry">Blueberry</option>
+		<option value="Black_Forest">Black Forest</option>
+		<option value="Pineapple">Pineapple</option>
+		<option value="Banana">Banana</option>
+		<option value="Mango">Mango</option>
+		<option value="Peach">Peach</option>
+		<option value="Caramel">Caramel</option>
+		<option value="Marble">Marble</option>
+		<option value="Funfetti">Funfetti</option>
+		<option value="Pistachio">Pistachio</option>
+		<option value="Lavender">Lavender</option>
+		<option value="Matcha">Matcha</option>
+		<option value="Chai">Chai</option>
+		<option value="Orange_Creamsicle">Orange Creamsicle</option>
+		<option value="Coconut_Lime">Coconut Lime</option>
+		<option value="Key_Lime">Key Lime</option>
+		<option value="Gingerbread">Gingerbread</option>
+		<option value="Peanut_Butter">Peanut Butter</option>
+		<option value="Salted_Caramel">Salted Caramel</option>
+		<option value="White_Chocolate">White Chocolate</option>
+		<option value="Mint_Chocolate">Mint Chocolate</option>
+		<option value="Tiramisu">Tiramisu</option>
+		<option value="Cookies_and_Cream">Cookies and Cream</option>
+		<option value="Neapolitan">Neapolitan</option>
+		<option value="Rum">Rum</option>
+		<option value="Irish_Cream">Irish Cream</option>
+		<option value="Baileys">Baileys</option>
+		<option value="Amaretto">Amaretto</option>
+		<option value="Grand_Marnier">Grand Marnier</option>
+		<option value="Pina_Colada">Pina Colada</option>
+		<option value="Champagne">Champagne</option>
+		<option value="Rosé">Rosé</option>
+		<option value="Mimosa">Mimosa</option>
+		<option value="Eggnog">Eggnog</option>
+		<option value="Maple">Maple</option>
+		<option value="Honey">Honey</option>
+		<option value="Cardamom">Cardamom</option>
+		<option value="Saffron">Saffron</option>
+		<option value="Pistachio_ Rose">Pistachio Rose</option>
+		<option value="Coconut_Pandan">Coconut Pandan</option>
+		<option value="Black_Sesame">Black Sesame</option>
+		<option value="Ube">Ube</option>
+		<option value="Durian">Durian</option>
+		<option value="Lychee">Lychee</option>
+		<option value="Passion_Fruit">Passion Fruit</option>
+		<option value="Guava">Guava</option>
+		<option value="Tamarind">Tamarind</option>
+		<option value="Cherry_Blossom">Cherry Blossom</option>
+		<option value="Sakura">Sakura</option>
+		<option value="Pomegranate">Pomegranate</option>
+		<option value="Dragon_Fruit">Dragon Fruit</option>
+		<option value="Acai">Acai</option>
+		<option value="Blue_Spirulina">Blue Spirulina</option>
+		<option value="Charcoal">Charcoal</option>
+		<option value="Beetroot">Beetroot</option>
+		<option value="Turmeric">Turmeric</option>
+		<option value="Lemon_Lavender">Lemon Lavender</option>
+		<option value="Rosemary">Rosemary Olive Oil</option>
+		<option value="Sweet_Corn">Sweet Corn</option>
+		<option value="Balsamic_Strawberry">Balsamic Strawberry</option>
+		<option value="Sourdough">Sourdough</option>
+		<option value="Brown_Butter">Brown Butter</option>
+		<option value="Chili_Chocolate">Chili Chocolate</option>
+		<option value="Praline">Praline</option>
+		<option value="Pumpkin_Spice">Pumpkin Spice</option>
+		<option value="Apple_Cinnamon">Apple Cinnamon</option>
+		<option value="Cranberry_Orange">Cranberry Orange</option>
+		<option value="Ginger_Molasses">Ginger Molasses</option>
+		<option value="Chocolate_Mint">Chocolate Mint</option>
+		<option value="Candy_Cane">Candy Cane</option>
+		<option value="Earl_Grey">Earl Grey</option>
+		<option value="Lavender">Lavender Earl Grey</option>
+		<option value="Blueberry_Lemon">Blueberry Lemon</option>
+		<option value="Lemon Poppy_Seed">Lemon Poppy Seed</option>
+		<option value="Raspberry_Lemon">Raspberry Lemon</option>
+		<option value="Chocolate_Raspberry">Chocolate Raspberry</option>
+		<option value="Chocolate_Strawberry">Chocolate Strawberry</option>
+		<option value="Chocolate_Orange">Chocolate Orange</option>
+		<option value="Chocolate_Hazelnut">Chocolate Hazelnut</option>
+		<option value="Chocolate_Peanut Butter">Chocolate Peanut Butter</option>
+		<option value="Chocolate_Coconut">Chocolate Coconut</option>
+		<option value="Chocolate_Mint">Chocolate Mint</option>
+		<option value="Chocolate_Caramel">Chocolate Caramel</option>
+		<option value="Chocolate_Cherry">Chocolate Cherry</option>
+
+
+            </select>
+        </div>
+        <div>
+            <label for="dietary">Dietary Restrictions or Allergies:</label>
+            <input type="radio" id="dietaryYes" name="dietary" value="Yes">
+            <label for="dietaryYes">Yes</label>
+            <input type="radio" id="dietaryNo" name="dietary" value="No" checked>
+            <label for="dietaryNo">No</label>
+        </div>
+        <hr>
+        <div>
+            <label for="themeColor">Theme or Color Scheme:</label>
+            <input type="text" id="themeColor" name="themeColor">
+        </div>
+        <div>
+            <label for="specialRequests">Special Requests or Customizations:</label>
+            <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
+        </div>
+        <hr>
+        <div>
+            <label for="deliveryOption">Delivery Option:</label>
+            <select id="deliveryOption" name="deliveryOption">
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</div>
+</body>
+</html>
